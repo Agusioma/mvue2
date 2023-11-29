@@ -10,11 +10,13 @@
 
 <script>
 import { useStore } from '/src/store';
+import {computed} from "vue";
 
 export default {
   setup() {
     const store = useStore();
-    const count = store.count;
+    const count = computed(() => store.count)
+
     return { count };
   },
   //store.
