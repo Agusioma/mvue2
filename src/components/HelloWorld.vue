@@ -5,19 +5,20 @@
       <i>This demo is hosted on Kinsta</i>
     </p>
   </div>
-  <div>{{ count }}</div>
+  <div>{{ doubleCount }}</div>
+  <button @click="increment">Increment</button>
 </template>
 
 <script>
 import { useStore } from '/src/store';
-import {computed} from "vue";
 
 export default {
   setup() {
     const store = useStore();
-    const count = computed(() => store.count)
-
-    return { count };
+    return {
+      doubleCount: store.doubleCount,
+      increment: store.increment
+    };
   },
   //store.
   name: 'HelloWorld',
