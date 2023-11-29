@@ -2,8 +2,7 @@
   "name": "my-vue-app",
   "version": "0.1.0",
   "scripts": {
-    "start": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "start": "vue-cli-service serve"
   },
   "dependencies": {
     "core-js": "^3.8.3",
