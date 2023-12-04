@@ -5,8 +5,8 @@
       <i>This demo is hosted on Kinsta</i>
     </p>
   </div>
-  <div>{{ doubleCount }}</div>
-  <button @click="increment">Increment</button>
+  <div>{{ store.doubleCount }}</div>
+  <button @click="store.increment">Increment</button>
 </template>
 
 <script>
@@ -16,8 +16,9 @@ export default {
   setup() {
     const store = useStore();
     return {
-      doubleCount: store.doubleCount,
-      increment: store.increment
+      store
+     /* doubleCount: store.doubleCount,
+      increment: store.increment*/
     };
   },
   //store.
